@@ -50,7 +50,7 @@ ggplot(data =j,aes(x = Year, y = j$`sum(Global_Sales)`,fill=Genre))+geom_bar(sta
 #best platform every year
 h<-group_by(vg,Year,Platform)
 i<-summarise(h,sum(Global_Sales))
-ggplot(data =i,aes(x = Year, y = i$`sum(Global_Sales)`,fill=Platform))+geom_line(stat = "identity",aes(color= i$Platform))
+ggplot(data =i,aes(x = Year, y = i$`sum(Global_Sales)`,fill=Platform))+geom_line(stat = "identity",aes(color= Platform))
 
 #best game every year
 k<-group_by(vg,Year)
